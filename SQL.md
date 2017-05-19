@@ -1,8 +1,8 @@
 # SQL
-Structured Query Language
+> Structured Query Language
 
 
-Basic stuff:
+## Basic stuff:
 
 ```sql
 create table tablename(field1 type constraints, field2...);
@@ -15,7 +15,7 @@ drop table tablename;
 ```
 
 
-Example:
+### Example:
 
 ```sql
 create table Customer(customerID int unsigned not null primary key,
@@ -29,14 +29,14 @@ alter table Customer add column age int;
 insert into Customer values(1, "John Doe", 19);
 insert into Payment values(1, 1, 4.20, now());
 ```
-Would create:
-Customer ([customerID](http://no.com), name, age)
-Payment ([paymentID](http://no.com), *customerID*, payment, date)
-**NB:** [underlined](http://www.no.com) for primary keys and *italics* for foreign keys
+> Would create:
+> Customer ([customerID](http://no.com), name, age)
+> Payment ([paymentID](http://no.com), *customerID*, payment, date)
+> **NB:** [underlined](http://www.no.com) for primary keys and *italics* for foreign keys
 
 
-**Joined Query**
-For the two tables (Customer and Payment) in the current database, list all customer names and payments record if their age is between 18- 20
+## **Joined Query**
+> For the two tables (Customer and Payment) in the current database, list all customer names and payments record if their age is between 18 - 20
 
 ```sql
 select c.name, p.payment from Customer c, Payment p

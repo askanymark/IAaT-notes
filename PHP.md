@@ -1,12 +1,6 @@
 # PHP
-Hypertext Preprocessor
-
-
-Cookies:
-If expiration time is set to 0 or omitted, the cookie expires when session is terminated.
-
-
-Regex example:
+> Hypertext Preprocessor
+### Regex example:
 
 ```php
 <? php
@@ -45,7 +39,7 @@ if ($name && $email && $comments && $age) {
 }
 ?>
 ```
-Function example:
+### Function example:
 
 ```php
 function isPalindrome($str) {
@@ -59,9 +53,7 @@ function isPalindrome($str) {
     }
 }
 ```
-
-
-Arrays:
+### Arrays:
 
 ```php
 $word = 'Hello, World!';
@@ -74,18 +66,18 @@ $students = array(9=>"Mark"); // puts "Mark" on 9th place, making 0-8 empty
 ```
 
 
-Array functions:
-count(*$arr*) - returns the number of elements
-print_r(*$arr*) - prints array's contents
-array_merge(*$arr1, $arr2*) - combines two different arrays
-sort(*$arr*) - sorts enumerated arrays by value
-ksort(*$arr*) - sorts by key
-array_slice(*array,start,length,preserve*) - returns selected parts of an array (substr() equivalent for arrays)
-explode(*$str*) - break apart a string into an array
-Implode(*$arr*) - merge an array into a unified string
+### Array functions:
+> count(*$arr*) - returns the number of elements
+> print_r(*$arr*) - prints array's contents
+> array_merge(*$arr1, $arr2*) - combines two different arrays
+> sort(*$arr*) - sorts enumerated arrays by value
+> ksort(*$arr*) - sorts by key
+> array_slice(*array,start,length,preserve*) - returns selected parts of an array (substr() equivalent for arrays)
+> explode(*$str*) - break apart a string into an array
+> Implode(*$arr*) - merge an array into a unified string
 
 
-Strings:
+### Strings:
 
 ```php
 // Concatenation
@@ -105,37 +97,33 @@ strcmp($name, 'Mark ') // Output: True
 ```
 
 
-Math functions:
-- abs($val) - Absolute value
-- ceil(*number*), floor(*number*) - Ceiling (round up) and floor (round down)
-- min(*number1, number2*), max(*array*) - Smallest or largest of a set of values
-- pow(*x, y*) - returns *x* raised to the power of *y*.
-- rand(*1, 100*) - Random integer in a given range
-- rand() - Random integer
-- round(*number*) - Round a floating-point number
-- sqrt(*number*) - Square root
+### Math functions:
+> abs($val) - Absolute value
+> ceil(*number*), floor(*number*) - Ceiling (round up) and floor (round down)
+> min(*number1, number2*), max(*array*) - Smallest or largest of a set of values
+> pow(*x, y*) - returns *x* raised to the power of *y*.
+> rand(*1, 100*) - Random integer in a given range
+> rand() - Random integer
+> round(*number*) - Round a floating-point number
+> sqrt(*number*) - Square root
 
 
-Files:
-- Use include() and require() to add files to scripts
 
 
-GET 
+### GET 
 - Asks a server for a page or data
 - Appends the information entered by the user to the URL in the
 form of name-value pairs(query string)
 - Not suitable for sending large volumes of data
 - Not suitable for sensitive or confidential information
 “www.mywebsite.com/form_action.php?firstname=Mickey&surname=Mouse”
-POST
+### POST
 - Submits data to a web server and retrieves the response
 - The values entered by the user are not appended to the URL but
 stored within the body of the request.
 - Can be used for large amounts of data
 - Is more secure as it is not visible while being transmitted.
-
-
-Examples:
+### Examples:
 
 ```markup
 <form action="http://www.google.com/search">
@@ -171,7 +159,7 @@ echo $base .'^'. $exp .'='. $result;
 ```
 
 
-Validation:
+### Validation:
 
 ```php
 isset($var) // True if $var has a value
@@ -180,14 +168,14 @@ is_numeric($var) // True if $var is a number or numeric string
 ```
 
 
-To determine whether the form has been submitted:
+### To determine whether the form has been submitted:
 
 ```markup
 <input type="hidden" name="submitted" value="true">
 ```
 
 
-Hashing:
+### Hashing:
 
 ```php
 md5($password);
@@ -201,7 +189,7 @@ if ($row['password'] == $hash) {
 ```
 
 
-For HTML protection against injections:
+### For HTML protection against injections:
 
 ```php
 // in php
@@ -209,7 +197,8 @@ For HTML protection against injections:
 ```
 
 
-Uploading files:
+### Uploading files:
+- Use include() and require() to add files to scripts
 
 ```markup
 <form action="param.php" method="post" enctype="multipart/form-data">
@@ -230,7 +219,7 @@ move_uploaded_file($from, $to); // moves from one location to another
 ```
 
 
-Cookies:
+### Cookies:
 
 ```php
 setcookie(name,[, value, expires, path, domain);
@@ -252,14 +241,14 @@ if (isset($_COOKIE['user'])) {
 ```
 
 
-Redirection:
+### Redirection:
 
 ```php
 header('Location: $url');
 ```
 
 
-Session:
+### Session:
 
 ```php
 session_start(); // open session

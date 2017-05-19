@@ -1,5 +1,5 @@
 # PDO
-PHP Data Object
+> PHP Data Object
 
 
 PDO Methods:
@@ -10,8 +10,20 @@ PDO Methods:
 - prepare - prepares a statement for execution and returns a statement object
 
 
-**PDOStatement object and methods**
-PDOStatement - represents a prepared statement and, after the statement is executed, an associated result.
+# **PDOStatement object and methods**
+> PDOStatement - represents a prepared statement and, after the statement is executed, an associated result.
+
+
+**PDO Syntax**:
+
+```php
+$name = new PDO("dbprogram:dbname=databse;host=server", "username", "password");
+$name->query("SQL query");
+```
+
+
+
+
 **Methods**:
 - columnCount() - number of columns in the results
 - fetch() - return the next row from the results
@@ -27,16 +39,6 @@ if ($rows->rowCount() > 0) {
     ...
 }
 ```
-
-
-**PDO Syntax**:
-
-```php
-$name = new PDO("dbprogram:dbname=databse;host=server", "username", "password");
-$name->query("SQL query");
-```
-
-
 - Using setAttribute you can tell PDO to throw PDOException when an error ocurrs
 
 ```php
@@ -44,8 +46,6 @@ $db = new PDO("mysql:dbname=university;host=localhost", "admin", "foo");
 $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 $rows = $db->query("seeelect * from student"); //error example
 ```
-
-
 - You can catch that exception
 
 ```php
@@ -64,8 +64,6 @@ try{
     ...
 }
 ```
-
-
 - exec example:
 
 ```php

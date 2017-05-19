@@ -1,16 +1,6 @@
 # Regex
-Validation
-
-
-In PHP, regexes are strings that begin and end with **/**
-
-
-These match 'abc':
-- 'abc', 'abcdef', 'defabc', '.=.abc.=.' ...
-These don't:
-- 'fedcba', 'ab c', 'PHP' ...
-
-
+> In PHP, regexes are strings that begin and end with **/**
+## The modifiers
 - **.** means any
   - -'/.oo.y/' matches 'Doocy', 'goofy', 'LooNy'
 - **i** means case-insensitive
@@ -39,7 +29,7 @@ These don't:
     - {2,} means 2 or more
     - {,6} means up to 6
     - {3} exactly 3
-Character sets:
+## Character sets:
 - **[]** group characters into a set; will match any **single** character from set
   - "/[bcd]art/" matches strings containing "bart", "cart" and "dart"
   - equivalent to "/(b|c|d)art/" but shorter
@@ -52,7 +42,7 @@ Character sets:
   - "/[^abcd]/" matches any character other than a, b, c, d
 
 
-Escape sequences:
+## Escape sequences:
 - Special escape sequence character sets
   - \d matches any digit (same as [0-9])
   - \D matches any non-digit (same as [^0-9])
@@ -60,6 +50,6 @@ Escape sequences:
   - \W matches any "non-word character"
   - \s matches any whitespace character ( , \t, \n, etc)
   - \S matches any non-whitespace
-Example:
-Write regular expressions for a username: 3 to 16 characters long containing letters, numbers, the _ and - characters
-- /^[a-z0-9_-]{3,16}$/ matches "ilovemyself12_3-"
+### Example:
+> Write regular expressions for a username: 3 to 16 characters long containing letters, numbers, the _ and - characters:
+>  /^[a-z0-9_-]{3,16}$/ matches "ilovemyself12_3-"
