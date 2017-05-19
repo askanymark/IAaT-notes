@@ -11,10 +11,10 @@
   - '/abc|def|g/' matches 'abc', 'def' or 'g'
 - **^** beginning of the line, **$** for end of the line
   - '/^<!--$/' matches a line consisting entirely of '<!--'
-- **\** starts an escape sequence
+- \ starts an escape sequence
   - many characters must be escaped to match them literally: /\$.[]()^*+?
   - '/<br\/>/' matches lines containing <br/> tags
-- ***** means 0 or more occurences
+- * means 0 or more occurences
   - '/abc*/' matches 'ab', 'abc', 'abcc', 'abccc' ...
   - '/a(bc)*/' matches "a", "abc", "abcbc", "abcbcbc" ...
   - "/a.*a/" matches "aa", "aba", "a8qa", "a!?_a" ...
