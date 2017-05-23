@@ -34,7 +34,7 @@
   - "/[bcd]art/" matches strings containing "bart", "cart" and "dart"
   - equivalent to "/(b|c|d)art/" but shorter
   - Inside [], many of the modifier keys act as normal characters
-    - "/what[!*?]*/" matches "what", "what!", "what?**!", "what??!" 
+    - "/what[!\*?]*/“ matches "what", "what!", "what?**!", "what??!" 
 - Inside a set, specify a range of characters with hyphen **-**
   - "/[a-z]/" matches any lowercase letter
   - "/[a-zA-Z0-9]/" matches any lower or uppercase letter or digit
