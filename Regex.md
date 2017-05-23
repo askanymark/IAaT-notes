@@ -13,7 +13,7 @@
   - '/^<!--$/' matches a line consisting entirely of '<!--'
 - \ starts an escape sequence
   - many characters must be escaped to match them literally: /\$.[]()^*+?
-  - '/<br\/>/' matches lines containing <br/> tags
+  - '/<br\\/>/‘ matches lines containing <br/> tags
 - \* means 0 or more occurences
   - '/abc*/' matches 'ab', 'abc', 'abcc', 'abccc' ...
   - '/a(bc)*/' matches "a", "abc", "abcbc", "abcbcbc" ...
